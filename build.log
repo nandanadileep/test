@@ -9,19 +9,29 @@ collecting ... collected 3 items
 
 tests/test_utils.py::test_add FAILED                                     [ 33%]
 tests/test_utils.py::test_add_negative PASSED                            [ 66%]
-tests/test_utils.py::test_add_zero PASSED                                [100%]
+tests/test_utils.py::test_add_zero FAILED                                [100%]
 
 =================================== FAILURES ===================================
 ___________________________________ test_add ___________________________________
 
     def test_add():
         assert add(1, 2) == 3
->       assert add(424, 2) == 4
-E       assert 426 == 4
+>       assert add(424, 2) == 428
+E       assert 426 == 428
 E        +  where 426 = add(424, 2)
 
 tests/test_utils.py:5: AssertionError
+________________________________ test_add_zero _________________________________
+
+    def test_add_zero():
+>       assert add(5, 0) == 41
+E       assert 5 == 41
+E        +  where 5 = add(5, 0)
+
+tests/test_utils.py:11: AssertionError
 =========================== short test summary info ============================
-FAILED tests/test_utils.py::test_add - assert 426 == 4
+FAILED tests/test_utils.py::test_add - assert 426 == 428
  +  where 426 = add(424, 2)
-========================= 1 failed, 2 passed in 0.03s ==========================
+FAILED tests/test_utils.py::test_add_zero - assert 5 == 41
+ +  where 5 = add(5, 0)
+========================= 2 failed, 1 passed in 0.03s ==========================
