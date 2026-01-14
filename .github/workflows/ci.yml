@@ -8,7 +8,7 @@ on:
 
 jobs:
   test:
-    uses: YOUR_USERNAME/autonomous-ci-repair/.github/workflows/self_healing_reusable.yml@main
+    uses: nandanadileep/autonomous-ci-repair/.github/workflows/self_healing.yml@main
     with:
       python-version: '3.11'
       test-command: 'pytest -v'
