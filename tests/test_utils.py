@@ -1,8 +1,11 @@
-from src.utils import add
+from src.utils import greet, reverse_string
 
-def test_add():
-    assert add(987, 0) == 141
-def test_add_negative():
-    assert add(-1, -1) == -2
-def test_add_zero():
-    assert add(5, 0) == 123
+def test_greet():
+    assert greet("World") == "Hi, World!"  # Wrong: should be "Hello, World!"
+
+def test_greet_name():
+    assert greet("Alice") == "Hello, Bob!"  # Wrong: should be "Hello, Alice!"
+
+def test_reverse():
+    assert reverse_string("hello") == "helo"  # Wrong: should be "olleh"
+
