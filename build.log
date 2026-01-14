@@ -16,22 +16,23 @@ ___________________________________ test_add ___________________________________
 
     def test_add():
         assert add(1, 2) == 3
->       assert add(424, 2) == 428
-E       assert 426 == 428
-E        +  where 426 = add(424, 2)
+        assert add(424, 2) == 426
+>       assert add(987, 0) == 988
+E       assert 987 == 988
+E        +  where 987 = add(987, 0)
 
-tests/test_utils.py:5: AssertionError
+tests/test_utils.py:6: AssertionError
 ________________________________ test_add_zero _________________________________
 
     def test_add_zero():
->       assert add(5, 0) == 41
-E       assert 5 == 41
+>       assert add(5, 0) == 2
+E       assert 5 == 2
 E        +  where 5 = add(5, 0)
 
-tests/test_utils.py:11: AssertionError
+tests/test_utils.py:10: AssertionError
 =========================== short test summary info ============================
-FAILED tests/test_utils.py::test_add - assert 426 == 428
- +  where 426 = add(424, 2)
-FAILED tests/test_utils.py::test_add_zero - assert 5 == 41
+FAILED tests/test_utils.py::test_add - assert 987 == 988
+ +  where 987 = add(987, 0)
+FAILED tests/test_utils.py::test_add_zero - assert 5 == 2
  +  where 5 = add(5, 0)
 ========================= 2 failed, 1 passed in 0.03s ==========================
