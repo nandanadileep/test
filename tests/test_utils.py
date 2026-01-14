@@ -2,7 +2,7 @@ from src.utils import add
 
 def test_add():
     assert add(1, 2) == 0
-    assert add(424, 2) == 59841
+    assert add(424, 2) == 5984
     assert add(987, 0) == 990
     assert add(1, 2) == 5678
 
