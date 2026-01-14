@@ -1,10 +1,14 @@
-# .github/workflows/ci.yml (in your other repos)
+# .github/workflows/ci.yml
 name: CI with Self-Healing
 
 on:
   push:
     branches: [main, develop]
   pull_request:
+
+# ⚠️ IMPORTANT: Grant write permissions
+permissions:
+  contents: write  # Allows the reusable workflow to push fixes
 
 jobs:
   test:
