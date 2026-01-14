@@ -8,29 +8,19 @@ plugins: anyio-4.12.1
 collecting ... collected 3 items
 
 tests/test_utils.py::test_add FAILED                                     [ 33%]
-tests/test_utils.py::test_add_negative FAILED                            [ 66%]
+tests/test_utils.py::test_add_negative PASSED                            [ 66%]
 tests/test_utils.py::test_add_zero PASSED                                [100%]
 
 =================================== FAILURES ===================================
 ___________________________________ test_add ___________________________________
 
     def test_add():
->       assert add(1, 2) == 192
-E       assert 3 == 192
+>       assert add(1, 2) == 0
+E       assert 3 == 0
 E        +  where 3 = add(1, 2)
 
 tests/test_utils.py:4: AssertionError
-______________________________ test_add_negative _______________________________
-
-    def test_add_negative():
->       assert add(-1, -1) == 109
-E       assert -2 == 109
-E        +  where -2 = add(-1, -1)
-
-tests/test_utils.py:6: AssertionError
 =========================== short test summary info ============================
-FAILED tests/test_utils.py::test_add - assert 3 == 192
+FAILED tests/test_utils.py::test_add - assert 3 == 0
  +  where 3 = add(1, 2)
-FAILED tests/test_utils.py::test_add_negative - assert -2 == 109
- +  where -2 = add(-1, -1)
-========================= 2 failed, 1 passed in 0.03s ==========================
+========================= 1 failed, 2 passed in 0.03s ==========================
