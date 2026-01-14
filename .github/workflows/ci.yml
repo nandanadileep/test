@@ -1,21 +1,19 @@
-# .github/workflows/ci.yml
 name: CI with Self-Healing
 
-on:
-  push:
-    branches: [main, develop]
-  pull_request:
+   on:
+     push:
+       branches: [main, develop]
+     pull_request:
 
-# ⚠️ IMPORTANT: Grant write permissions
-permissions:
-  contents: write  # Allows the reusable workflow to push fixes
+   permissions:
+     contents: write
 
-jobs:
-  test:
-    uses: nandanadileep/autonomous-ci-repair/.github/workflows/self_healing.yml@main
-    with:
-      python-version: '3.11'
-      test-command: 'pytest -v'
-    secrets:
-      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-      GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+   jobs:
+     test:
+       uses: nandanadileep/autonomous-ci-repair/.github/workflows/self_healing.yml@main
+       with:
+         python-version: '3.11'
+         test-command: 'pytest -v'
+       secrets:
+         GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+         GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
