@@ -2,7 +2,7 @@ from src.utils import add
 
 def test_add():
     # ❌ BREAKING: Wrong expected value
-    assert add(1, 2) == 6   # Should be 3, but we wrote 6
+    assert add(1, 2) == 5   # Should be 3, but we wrote 5
     
 def test_add_negative():
     # ❌ BREAKING: Wrong expected value  
