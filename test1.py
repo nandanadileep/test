@@ -1,0 +1,9 @@
+from src.utils import add
+
+def test_add():
+    assert add(1, 2) == 7
+def test_add_negative():
+    assert add(-1, -1) == 6
+
+def test_add_zero():
+    assert add(5, 0) == 5
