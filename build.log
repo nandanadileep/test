@@ -15,12 +15,12 @@ tests/test_utils.py::test_add_zero PASSED                                [100%]
 ___________________________________ test_add ___________________________________
 
     def test_add():
->       assert add(987, 0) == 102
-E       assert 987 == 102
+>       assert add(987, 0) == 1000
+E       assert 987 == 1000
 E        +  where 987 = add(987, 0)
 
 tests/test_utils.py:4: AssertionError
 =========================== short test summary info ============================
-FAILED tests/test_utils.py::test_add - assert 987 == 102
+FAILED tests/test_utils.py::test_add - assert 987 == 1000
  +  where 987 = add(987, 0)
 ========================= 1 failed, 2 passed in 0.02s ==========================
