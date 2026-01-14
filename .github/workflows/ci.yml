@@ -1,0 +1,17 @@
+# .github/workflows/ci.yml (in your other repos)
+name: CI with Self-Healing
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+
+jobs:
+  test:
+    uses: YOUR_USERNAME/autonomous-ci-repair/.github/workflows/self_healing_reusable.yml@main
+    with:
+      python-version: '3.11'
+      test-command: 'pytest -v'
+    secrets:
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
