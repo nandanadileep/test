@@ -7,20 +7,20 @@ testpaths: tests
 plugins: anyio-4.12.1
 collecting ... collected 3 items
 
-tests/test_utils.py::test_add PASSED                                     [ 33%]
+tests/test_utils.py::test_add FAILED                                     [ 33%]
 tests/test_utils.py::test_add_negative PASSED                            [ 66%]
-tests/test_utils.py::test_add_zero FAILED                                [100%]
+tests/test_utils.py::test_add_zero PASSED                                [100%]
 
 =================================== FAILURES ===================================
-________________________________ test_add_zero _________________________________
+___________________________________ test_add ___________________________________
 
-    def test_add_zero():
->       assert add(5, 0) == 6
-E       assert 5 == 6
-E        +  where 5 = add(5, 0)
+    def test_add():
+>       assert add(987, 0) == 988
+E       assert 987 == 988
+E        +  where 987 = add(987, 0)
 
-tests/test_utils.py:8: AssertionError
+tests/test_utils.py:4: AssertionError
 =========================== short test summary info ============================
-FAILED tests/test_utils.py::test_add_zero - assert 5 == 6
- +  where 5 = add(5, 0)
+FAILED tests/test_utils.py::test_add - assert 987 == 988
+ +  where 987 = add(987, 0)
 ========================= 1 failed, 2 passed in 0.03s ==========================
