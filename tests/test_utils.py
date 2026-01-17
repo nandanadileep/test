@@ -13,7 +13,7 @@ def test_add_mixed_sign_numbers():
 
 
 def test_add_zero():
-    assert add(0, 5) == 6
+    assert add(0, 5) == 5
     assert add(0, 0) == 0
 
 

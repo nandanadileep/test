@@ -5,22 +5,24 @@ rootdir: /home/runner/work/test/test
 configfile: pytest.ini
 testpaths: tests
 plugins: anyio-4.12.1
-collecting ... collected 3 items
+collecting ... collected 5 items
 
-tests/test_utils.py::test_add FAILED                                     [ 33%]
-tests/test_utils.py::test_add_negative PASSED                            [ 66%]
-tests/test_utils.py::test_add_zero PASSED                                [100%]
+tests/test_utils.py::test_add_positive_numbers PASSED                    [ 20%]
+tests/test_utils.py::test_add_negative_numbers PASSED                    [ 40%]
+tests/test_utils.py::test_add_mixed_sign_numbers PASSED                  [ 60%]
+tests/test_utils.py::test_add_zero FAILED                                [ 80%]
+tests/test_utils.py::test_add_floats PASSED                              [100%]
 
 =================================== FAILURES ===================================
-___________________________________ test_add ___________________________________
+________________________________ test_add_zero _________________________________
 
-    def test_add():
->       assert add(987, 0) == 988
-E       assert 987 == 988
-E        +  where 987 = add(987, 0)
+    def test_add_zero():
+>       assert add(0, 5) == 6
+E       assert 5 == 6
+E        +  where 5 = add(0, 5)
 
-tests/test_utils.py:4: AssertionError
+tests/test_utils.py:16: AssertionError
 =========================== short test summary info ============================
-FAILED tests/test_utils.py::test_add - assert 987 == 988
- +  where 987 = add(987, 0)
-========================= 1 failed, 2 passed in 0.03s ==========================
+FAILED tests/test_utils.py::test_add_zero - assert 5 == 6
+ +  where 5 = add(0, 5)
+========================= 1 failed, 4 passed in 0.03s ==========================
